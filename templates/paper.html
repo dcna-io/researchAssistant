@@ -1,0 +1,33 @@
+{% extends 'viewflow/flow/task.html' %}
+{% load material_form viewflow %}
+
+{% block content %}
+<div class="left-panel">
+    <div class="card">
+        <div class="card-content">
+            {% block card %}
+            <div class="form-title">Paper: {{ title }}</div>
+            <table class="table bordered">
+                <tr>
+                    <th>DOI</th>
+                    <td>{{ doi }}</td>
+                </tr>
+                <tr>
+                    <th>Abstract</th>
+                    <td align="justify">{{ abstract }}</td>
+                </tr>
+            {% endblock %}
+            </table>
+        <div class="card-action">
+            <div class="right-align">
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    {% form form=form %} {% endform %}
+                    {{ activation.management_form }}
+                    <button type="submit">Submit</button>
+                </form> 
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

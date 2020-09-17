@@ -1,0 +1,13 @@
+beautifulsoup4==4.9.1
+bs4==0.0.1
+Django==3.1.1
+django-annoying==0.10.6
+django-filter==2.3.0
+django-jsonstore==0.4.1
+django-material==1.7.0
+django-viewflow==1.6.1
+ipdb==0.13.3
+ipython==7.18.1
+requests==2.24.0
+urllib3==1.25.10
+viewflow==0.0
