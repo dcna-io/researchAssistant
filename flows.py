@@ -1,5 +1,6 @@
 import os
 import logging
+import sys
 from viewflow import flow, frontend, lock
 from viewflow.base import this, Flow
 from viewflow.compat import _
@@ -88,7 +89,7 @@ class ResearchFlow(Flow):
 
 
     def get_papers_metadata(self, activation):
-        import ipdb; ipdb.set_trace()
+        #import ipdb; ipdb.set_trace()
         logger.info("Starting get metadata function")
         research = activation.process.research
         search_params = {
@@ -99,7 +100,7 @@ class ResearchFlow(Flow):
         try:
           os.environ["SD_TOKEN"]
         except KeyError:
-          print "Please set the environment variable SD_TOKEN as token for ScienceDirect API"
+          print("Please set the environment variable SD_TOKEN as token for ScienceDirect API")
           sys.exit(1)
         token = os.environ["SD_TOKEN"]
         search_bases = research.search_bases.iterator()

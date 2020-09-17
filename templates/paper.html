@@ -6,11 +6,31 @@
     <div class="card">
         <div class="card-content">
             {% block card %}
-            <div class="form-title">Paper: {{ title }}</div>
+            <div class="form-title" style="font-size: 20pt">Paper: {{ title }}</div>
             <table class="table bordered">
                 <tr>
                     <th>DOI</th>
                     <td>{{ doi }}</td>
+                </tr>
+                <tr>
+                    <th>Publication date</th>
+                    <td>{{ pubdate }}</td>
+                </tr>
+                <tr>
+                    <th>Publication</th>
+                    <td>{{ publication }}</td>
+                </tr>
+                <tr>
+                    <th>URL</th>
+                    <td><a href={{ url }} target="_blank">{{ url }}</a></td>
+                </tr>
+                <tr>
+                    <th>Authors</th>
+                    <td>{{ authors }}</a></td>
+                </tr>
+                <tr>
+                    <th>Pages</th>
+                    <td>{{ pages }}</a></td>
                 </tr>
                 <tr>
                     <th>Abstract</th>

@@ -62,7 +62,7 @@ def paper_review(request, **kwargs):
         form = PaperReviewForm(request.POST or None)
         if form.is_valid():
             approved = form.cleaned_data['approved']
-            import ipdb; ipdb.set_trace()
+            #import ipdb; ipdb.set_trace()
             if not approved:
                 research.papers.remove(paper)
             research.papers_metadata_analized += 1
