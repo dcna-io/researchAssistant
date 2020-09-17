@@ -118,10 +118,3 @@ class ResearchFlow(Flow):
             paper.save()
             logging.info("Adding paper {}".format(paper.title))
             research.papers.add(paper)
-
-
-    def check_reviewed_papers(self, activation):
-        research = activation.process.research
-        papers = len(research.papers.all())
-        papers_analized = research.papers_metadata_analized
-        return papers == papers_analized
